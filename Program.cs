@@ -1,19 +1,23 @@
 ﻿using System;
+using Module.Models;
 
 namespace Module
 {
     class Program
     {
+       
         static void Main(string[] args)
         {
-            int a = 600;
-            int b = -55;
-            int c = 32;
-            int d = 0;
+            User myUser = new User();
+            myUser.username = "Totally_Cool_Dude";
+            myUser.password = "1234567890";
+            myUser.email = "T0tallyC00l@yahoo.com";
 
-            d = a + c + b;
-
-            Console.WriteLine(d);
+            Console.WriteLine(myUser.username);
+            Console.WriteLine(myUser.password);
+            Console.WriteLine(myUser.email);
         }
+
+         
     }
 }
