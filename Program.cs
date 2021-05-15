@@ -6,7 +6,7 @@ namespace Module
 {
     class Program
     {
-
+       
         static void Main(string[] args)
         {
             User myUser = new User();
@@ -14,17 +14,13 @@ namespace Module
             myUser.password = "1234567890";
 
 
-
             UserDTO newDTOUser = new UserDTO();
-            newDTOUser.username = "RadicalGal";
-            newDTOUser.password = "213054532";
-            newDTOUser.email = "R4DG4L@yahoo.com";
-
-
+            newDTOUser.username = "Totally_Cool_Dude";
+            newDTOUser.password = "1234567890";
 
             Console.WriteLine(newDTOUser.username);
             Console.WriteLine(newDTOUser.password);
-            Console.WriteLine(newDTOUser.email);
+
 
 
 
