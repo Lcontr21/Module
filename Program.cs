@@ -6,22 +6,34 @@ namespace Module
 {
     class Program
     {
-       
+
         static void Main(string[] args)
         {
-            Console.WriteLine(SumOfThreeVariables(10, 5, 6));
+            User myUser = new User();
+            myUser.username = "Totally_Cool_Dude";
+            myUser.password = "1234567890";
+
+
+
+            UserDTO newDTOUser = new UserDTO();
+            newDTOUser.username = "RadicalGal";
+            newDTOUser.password = "213054532";
+            newDTOUser.email = "R4DG4L@yahoo.com";
+
+
+
+            Console.WriteLine(newDTOUser.username);
+            Console.WriteLine(newDTOUser.password);
+            Console.WriteLine(newDTOUser.email);
+
+
+
+
+
+
         }
-
-        static int SumOfThreeVariables(int value1, int value2, int value3)
-        {
-            int result = 0;
-
-            result = value1 + value2 - value3;
-
-            return result; 
-
-                
-        }
-         
     }
+
+    
+    
 }
