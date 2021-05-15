@@ -9,24 +9,19 @@ namespace Module
        
         static void Main(string[] args)
         {
-            User myUser = new User();
-            myUser.username = "Totally_Cool_Dude";
-            myUser.password = "1234567890";
-            
-
-
-            UserDTO newDTOUser = new UserDTO();
-            newDTOUser.username = "Totally_Cool_Dude";
-            newDTOUser.password = "1234567890";
-            
-
-            Console.WriteLine(newDTOUser.username);
-            Console.WriteLine(newDTOUser.password);
-            
-
-
+            Console.WriteLine(SumOfThreeVariables(10, 5, 6));
         }
 
+        static int SumOfThreeVariables(int value1, int value2, int value3)
+        {
+            int result = 0;
+
+            result = value1 + value2 - value3;
+
+            return result; 
+
+                
+        }
          
     }
 }
