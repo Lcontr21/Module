@@ -1,6 +1,7 @@
 ﻿using System;
 using Module.Models;
 using Module.DTOS;
+using System.Collections.Generic;
 
 namespace Module
 {
@@ -35,12 +36,44 @@ namespace Module
             //}
 
 
-            for (int x=0;x<210;x++)
+            //for (int x=0;x<210;x++)
+            //{
+            //    Console.WriteLine("Line:" + x);
+            //}
+
+            int[] myArray = new int[5];
+
+            myArray[0] = 1;
+            myArray[1] = 2;
+            myArray[2] = 3;
+            myArray[3] = 4;
+            myArray[4] = 5;
+
+            foreach (var item in myArray)
             {
-                Console.WriteLine("Line:" + x);
+                Console.WriteLine(item);
             }
 
-            
+            List<int> myList = new List<int>();
+
+            myList.Add(10);
+            myList.Add(11); ;
+            myList.Add(12);
+            myList.Add(13);
+            myList.Add(14);
+            myList.Add(15);
+            myList.Add(16);
+            myList.Add(17);
+            myList.Add(18);
+            myList.Add(19);
+
+            foreach(var item in myList)
+            {
+                Console.Write(item + ",");
+            }
+
+
+
         }
 
     }    
