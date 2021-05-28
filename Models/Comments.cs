@@ -9,8 +9,13 @@ namespace Module.Models
 
         public string positive { get; set; }
 
-        public string negaitve { get; set; }
+        public string negative { get; set; }
 
         public string crucial { get; set; }
+
+        internal void Add(string v)
+        {
+
+        }
     }
 }

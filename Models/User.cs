@@ -3,31 +3,20 @@ namespace Module.Models
 {
     public class User
     {
-        public string username { get; set; }
+        public class user
+        {
+        }
 
-        public string password { get; set; }
+        public string username1 { get; set; }
 
+        public string username2 { get; set; }
 
+        public string username3 { get; set; }
 
+      
 
-
-
-
-
-
-
-
-
-
-
-
+        
     }
-   
-
-   
-
-
-
 
 }
 
