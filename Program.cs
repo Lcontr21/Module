@@ -18,24 +18,28 @@ namespace Module
             //Console.WriteLine(newDTOUser.password);
 
 
-            DateTime myDateTimeVariable = new DateTime(2003, 06, 17, 15, 1, 0);
-            DateTime myDateTimeVariable2 = new DateTime(1980, 04, 21, 9, 0, 53);
+            //DateTime myDateTimeVariable = new DateTime(2003, 06, 17, 15, 1, 0);
+            //DateTime myDateTimeVariable2 = new DateTime(1980, 04, 21, 9, 0, 53);
 
-            int result = DateTime.Compare(myDateTimeVariable, myDateTimeVariable2);
+            //int result = DateTime.Compare(myDateTimeVariable, myDateTimeVariable2);
 
-            if (myDateTimeVariable > myDateTimeVariable2)
-            {
-                Console.WriteLine(myDateTimeVariable);
-            }
-            else
-            {
-                Console.WriteLine(myDateTimeVariable2);
-            }
-
-            //for (int x=0;x<210;x++)
+            ////if (myDateTimeVariable > myDateTimeVariable2)
             //{
-            //    Console.WriteLine("Line:" + x);
+            //    Console.WriteLine(myDateTimeVariable);
             //}
+            //else
+            //{
+            //    Console.WriteLine(myDateTimeVariable2);
+            //}
+
+            int sum = 0;
+
+            for (int x=1;x<=20;x++)
+            {
+                sum += x;
+            }
+
+            Console.WriteLine("The result is:+ "  + sum);
 
             //int[] myArray = new int[5];
 
@@ -50,7 +54,7 @@ namespace Module
             //    Console.WriteLine(item);
             //}
 
-            //List<int> myList = new List<int>();
+            ////List<int> myList = new List<int>();
 
             //myList.Add(10);
             //myList.Add(11); ;

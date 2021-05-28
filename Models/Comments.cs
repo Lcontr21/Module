@@ -13,9 +13,6 @@ namespace Module.Models
 
         public string crucial { get; set; }
 
-        internal void Add(string v)
-        {
-
-        }
+       
     }
 }
