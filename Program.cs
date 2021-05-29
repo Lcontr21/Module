@@ -32,14 +32,14 @@ namespace Module
             //    Console.WriteLine(myDateTimeVariable2);
             //}
 
-            int sum = 0;
+            //int sum = 0;
 
-            for (int x=1;x<=20;x++)
-            {
-                sum += x;
-            }
+            //for (int x=1;x<=20;x++)
+            //{
+            //    sum += x;
+            //}
 
-            Console.WriteLine("The result is:+ "  + sum);
+            //Console.WriteLine("The result is:+ "  + sum);
 
             //int[] myArray = new int[5];
 
@@ -72,30 +72,67 @@ namespace Module
             //    Console.Write(item + ",");
             //}
 
-            //    User myUser = new User();
-            //    myUser.username1 = "Leonardo Contreras";
-            //    myUser.username2 = "McKain";
-            //    myUser.username3 = "Frank";
+            string response = "";
+            while (response != "5")
+            {
+                Console.WriteLine("1. Create a User");
+                Console.WriteLine("2. Create a Comment");
+                Console.WriteLine("3. Option 1");
+                Console.WriteLine("4. Option 2");
+                Console.WriteLine("5. Exit");
 
-            //    Comments myComments = new Comments();
-            //    myComments.positive = "This picture is really pretty, good job";
-            //    myComments.negative = "Eww, I hate it, you are bad at taking good photos";
-            //    myComments.crucial = "Try to keep a steady hand when taking a picture";
+                Console.WriteLine("");
+                Console.WriteLine("Please select an option");
 
+                response = Console.ReadLine();
 
-            //    List<string> myUsers = new List<string>();
+                switch (response)
+                {
+                    case "1":
+                        User newUser = new User();
+                        newUser.username1 = "Leonardo Contreras";
+                        newUser.username2 = "McKain";
+                        newUser.username3 = "Frank";
 
-            //    myUsers.Add("Leonardo Contreras");
-            //    myUsers.Add("McKain");
-            //    myUsers.Add("Frank");
+                        Console.WriteLine("The User you created is:" +
+                                         newUser.username1);
+                        break;
 
-            //    List<string> myCommments = new List<string>();
+                    case "2":
+                        Comments newComment = new Comments();
+                        newComment.positive = "This picture is pretty, I like the vibrant colors";
+                        newComment.negative = "I hate how you took the pictuer its all blurry";
+                        newComment.crucial = "It seems that you don't have a steady hand, try to buy a stand to take pictures more clearly";
 
-            //    myComments.Add("This picture is really pretty, good job");
-            //    myComments.Add("Eww, I hate it, you are bad at taking good photos");
-            //    myComments.Add("Try to keep a steady hand when taking a picture");
-            //}
+                        Console.WriteLine("The comment you created is:" +
+                                         newComment.positive);
+                        break;
 
+                    case "3":
+                        List<string> Users = new List<string>();
+
+                        Users.Add("Leonardo Contreras");
+                        Users.Add("McKain");
+                        Users.Add("Frank");
+                        foreach (var item in Users)
+                        {
+                            Console.WriteLine("All the users available are:" +
+                                       Users);
+                        }
+                        break;
+
+                    case "4":
+                            List<string> myComments = new List<string>();
+
+                            myComments.Add("This picture is pretty, I like the vibrant colors");
+                            myComments.Add("I hate how you took the pictuer its all blurry");
+                            myComments.Add("It seems that you don't have a steady hand, try to buy a stand to take pictures more clearly");
+                        Console.WriteLine("All the comments you created:" +
+                                        myComments);
+                        break;
+                }
+            }
         }
     }
 }
+                    

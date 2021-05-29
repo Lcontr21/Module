@@ -12,7 +12,6 @@ namespace Module.Models
         public string username2 { get; set; }
 
         public string username3 { get; set; }
-
       
 
         
