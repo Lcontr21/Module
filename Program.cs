@@ -73,6 +73,10 @@ namespace Module
             //}
 
             string response = "";
+
+            List<User> myUser = new List<User>();
+            List<Comments> myComments = new List<Comments>();
+
             while (response != "5")
             {
                 Console.WriteLine("1. Create a User");
@@ -94,8 +98,10 @@ namespace Module
                         newUser.username2 = "McKain";
                         newUser.username3 = "Frank";
 
-                        Console.WriteLine("The User you created is:" +
-                                         newUser.username1);
+                        myUser.Add(newUser);
+
+                        Console.WriteLine("The User you created is:");
+                                        
                         break;
 
                     case "2":
@@ -104,32 +110,34 @@ namespace Module
                         newComment.negative = "I hate how you took the pictuer its all blurry";
                         newComment.crucial = "It seems that you don't have a steady hand, try to buy a stand to take pictures more clearly";
 
-                        Console.WriteLine("The comment you created is:" +
-                                         newComment.positive);
+                        myComments.Add(newComment);
+
+                        Console.WriteLine("The comment you created is:");
+                                       
                         break;
 
                     case "3":
-                        List<string> Users = new List<string>();
+                        Console.WriteLine("These is the list of users created:");
 
-                        Users.Add("Leonardo Contreras");
-                        Users.Add("McKain");
-                        Users.Add("Frank");
-                        foreach (var item in Users)
+                        foreach(var insideuser in myUser)
                         {
-                            Console.WriteLine("All the users available are:" +
-                                       Users);
+                            Console.WriteLine("The name of the user1 is:" + insideuser.username1);
+                            Console.WriteLine("The name of the user2 is:" + insideuser.username2);
+                            Console.WriteLine("The name of the user3 is:" + insideuser.username3);
                         }
                         break;
 
                     case "4":
-                            List<string> myComments = new List<string>();
+                        Console.WriteLine("These is the list of comments created:");
 
-                            myComments.Add("This picture is pretty, I like the vibrant colors");
-                            myComments.Add("I hate how you took the pictuer its all blurry");
-                            myComments.Add("It seems that you don't have a steady hand, try to buy a stand to take pictures more clearly");
-                        Console.WriteLine("All the comments you created:" +
-                                        myComments);
+                        foreach (var insidecomment in myComments)
+                        {
+                            Console.WriteLine("Comment1 says: " + insidecomment.positive);
+                            Console.WriteLine("Comment2 says: " + insidecomment.negative);
+                            Console.WriteLine("Comment3 says: " + insidecomment.crucial);
+                        }
                         break;
+                      
                 }
             }
         }
