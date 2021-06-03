@@ -7,11 +7,11 @@ namespace Module.Models
         {
         }
 
-        public string username1 { get; set; }
+        public string UserID { get; set; }
 
-        public string username2 { get; set; }
+        public string Usermail { get; set; }
 
-        public string username3 { get; set; }
+        public string Userpassword { get; set; }
       
 
         

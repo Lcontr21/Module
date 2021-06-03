@@ -2,6 +2,7 @@
 using Module.Models;
 using Module.DTOS;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Module
 {
@@ -10,135 +11,100 @@ namespace Module
 
         static void Main()
         {
-            //UserDTO newDTOUser = new UserDTO();
-            //newDTOUser.username = "Totally_Cool_Dude";
-            //newDTOUser.password = "1234567890";
-
-            //Console.WriteLine(newDTOUser.username);
-            //Console.WriteLine(newDTOUser.password);
-
-
-            //DateTime myDateTimeVariable = new DateTime(2003, 06, 17, 15, 1, 0);
-            //DateTime myDateTimeVariable2 = new DateTime(1980, 04, 21, 9, 0, 53);
-
-            //int result = DateTime.Compare(myDateTimeVariable, myDateTimeVariable2);
-
-            ////if (myDateTimeVariable > myDateTimeVariable2)
-            //{
-            //    Console.WriteLine(myDateTimeVariable);
-            //}
-            //else
-            //{
-            //    Console.WriteLine(myDateTimeVariable2);
-            //}
-
-            //int sum = 0;
-
-            //for (int x=1;x<=20;x++)
-            //{
-            //    sum += x;
-            //}
-
-            //Console.WriteLine("The result is:+ "  + sum);
-
-            //int[] myArray = new int[5];
-
-            //myArray[0] = 1;
-            //myArray[1] = 2;
-            //myArray[2] = 3;
-            //myArray[3] = 4;
-            //myArray[4] = 5;
-
-            //foreach (var item in myArray)
-            //{
-            //    Console.WriteLine(item);
-            //}
-
-            ////List<int> myList = new List<int>();
-
-            //myList.Add(10);
-            //myList.Add(11); ;
-            //myList.Add(12);
-            //myList.Add(13);
-            //myList.Add(14);
-            //myList.Add(15);
-            //myList.Add(16);
-            //myList.Add(17);
-            //myList.Add(18);
-            //myList.Add(19);
-
-            //foreach(var item in myList)
-            //{
-            //    Console.Write(item + ",");
-            //}
-
-            string response = "";
-
-            List<User> myUser = new List<User>();
-            List<Comments> myComments = new List<Comments>();
-
-            while (response != "5")
+            try
             {
-                Console.WriteLine("1. Create a User");
-                Console.WriteLine("2. Create a Comment");
-                Console.WriteLine("3. Option 1");
-                Console.WriteLine("4. Option 2");
-                Console.WriteLine("5. Exit");
+                List<User> myList = new List<User>();
 
-                Console.WriteLine("");
-                Console.WriteLine("Please select an option");
+                User UserLeonardo = new User();
+                UserLeonardo.UserID = "1";
+                UserLeonardo.Usermail = "LC12@mail.com";
+                UserLeonardo.Userpassword = "1234567890";
 
-                response = Console.ReadLine();
+                myList.Add(UserLeonardo);
 
-                switch (response)
+
+                User UserMcKain = new User();
+                UserMcKain.UserID = "02";
+                UserMcKain.Usermail = "MK34@mail.com";
+                UserMcKain.Userpassword = "45678434";
+
+                myList.Add(UserMcKain);
+
+                User UserLuca = new User();
+                UserLuca.UserID = "03";
+                UserLuca.Usermail = "LA67@mail.com";
+                UserLuca.Userpassword = "189302";
+
+                myList.Add(UserLuca);
+
+                User UserAnna = new User();
+                UserAnna.UserID = "04";
+                UserAnna.Usermail = "AA34@mail.com";
+                UserAnna.Userpassword = "19013";
+
+                myList.Add(UserAnna);
+
+                User UserJhon = new User();
+                UserJhon.UserID = "05";
+                UserJhon.Usermail = "JN90@mail.com";
+                UserJhon.Userpassword = "045823";
+
+                myList.Add(UserJhon);
+
+                User UserAlex = new User();
+                UserAlex.UserID = "06";
+                UserAlex.Usermail = "AX54@mail.com";
+                UserAlex.Userpassword = "78941234";
+
+                myList.Add(UserAlex);
+
+                User UserAthena = new User();
+                UserAthena.UserID = "07";
+                UserAthena.Usermail = "AE@mail.com";
+                UserAthena.Userpassword = "09814534";
+
+                myList.Add(UserAthena);
+
+                User UserThomas = new User();
+                UserThomas.UserID = "08";
+                UserThomas.Usermail = "TH33@mail.com";
+                UserThomas.Userpassword = "444023";
+
+                myList.Add(UserThomas);
+
+                User UserDiana = new User();
+                UserDiana.UserID = "09";
+                UserDiana.Usermail = "DN@mail.com";
+                UserDiana.Userpassword = "80459234";
+
+                myList.Add(UserDiana);
+
+                User UserEva = new User();
+                UserEva.UserID = "10";
+                UserEva.Usermail = "EV@mail.com";
+                UserEva.Userpassword = "895019451";
+
+                myList.Add(UserEva);
+
+                List<User> result = myList.Where(user => user.UserID == "01").ToList();
+
+                if(result.Count == 0)
                 {
-                    case "1":
-                        User newUser = new User();
-                        newUser.username1 = "Leonardo Contreras";
-                        newUser.username2 = "McKain";
-                        newUser.username3 = "Frank";
-
-                        myUser.Add(newUser);
-
-                        Console.WriteLine("The User you created is:");
-                                        
-                        break;
-
-                    case "2":
-                        Comments newComment = new Comments();
-                        newComment.positive = "This picture is pretty, I like the vibrant colors";
-                        newComment.negative = "I hate how you took the pictuer its all blurry";
-                        newComment.crucial = "It seems that you don't have a steady hand, try to buy a stand to take pictures more clearly";
-
-                        myComments.Add(newComment);
-
-                        Console.WriteLine("The comment you created is:");
-                                       
-                        break;
-
-                    case "3":
-                        Console.WriteLine("These is the list of users created:");
-
-                        foreach(var insideuser in myUser)
-                        {
-                            Console.WriteLine("The name of the user1 is:" + insideuser.username1);
-                            Console.WriteLine("The name of the user2 is:" + insideuser.username2);
-                            Console.WriteLine("The name of the user3 is:" + insideuser.username3);
-                        }
-                        break;
-
-                    case "4":
-                        Console.WriteLine("These is the list of comments created:");
-
-                        foreach (var insidecomment in myComments)
-                        {
-                            Console.WriteLine("Comment1 says: " + insidecomment.positive);
-                            Console.WriteLine("Comment2 says: " + insidecomment.negative);
-                            Console.WriteLine("Comment3 says: " + insidecomment.crucial);
-                        }
-                        break;
-                      
+                    throw new Exception("Nothing was found");
                 }
+                else
+                {
+                    foreach (var user in result)
+                    {
+                        Console.WriteLine(user.UserID);
+                        Console.WriteLine(user.Usermail);
+                        Console.WriteLine(user.Userpassword);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
             }
         }
     }
