@@ -11,102 +11,119 @@ namespace Module
 
         static void Main()
         {
-            try
-            {
-                List<User> myList = new List<User>();
+            //try
+            //{
+            //    List<User> myList = new List<User>();
 
-                User UserLeonardo = new User();
-                UserLeonardo.UserID = "1";
-                UserLeonardo.Usermail = "LC12@mail.com";
-                UserLeonardo.Userpassword = "1234567890";
+            //    User UserLeonardo = new User();
+            //    UserLeonardo.UserID = "1";
+            //    UserLeonardo.Usermail = "LC12@mail.com";
+            //    UserLeonardo.Userpassword = "1234567890";
 
-                myList.Add(UserLeonardo);
+            //    myList.Add(UserLeonardo);
 
 
-                User UserMcKain = new User();
-                UserMcKain.UserID = "02";
-                UserMcKain.Usermail = "MK34@mail.com";
-                UserMcKain.Userpassword = "45678434";
+            //    User UserMcKain = new User();
+            //    UserMcKain.UserID = "02";
+            //    UserMcKain.Usermail = "MK34@mail.com";
+            //    UserMcKain.Userpassword = "45678434";
 
-                myList.Add(UserMcKain);
+            //    myList.Add(UserMcKain);
 
-                User UserLuca = new User();
-                UserLuca.UserID = "03";
-                UserLuca.Usermail = "LA67@mail.com";
-                UserLuca.Userpassword = "189302";
+            //    User UserLuca = new User();
+            //    UserLuca.UserID = "03";
+            //    UserLuca.Usermail = "LA67@mail.com";
+            //    UserLuca.Userpassword = "189302";
 
-                myList.Add(UserLuca);
+            //    myList.Add(UserLuca);
 
-                User UserAnna = new User();
-                UserAnna.UserID = "04";
-                UserAnna.Usermail = "AA34@mail.com";
-                UserAnna.Userpassword = "19013";
+            //    User UserAnna = new User();
+            //    UserAnna.UserID = "04";
+            //    UserAnna.Usermail = "AA34@mail.com";
+            //    UserAnna.Userpassword = "19013";
 
-                myList.Add(UserAnna);
+            //    myList.Add(UserAnna);
 
-                User UserJhon = new User();
-                UserJhon.UserID = "05";
-                UserJhon.Usermail = "JN90@mail.com";
-                UserJhon.Userpassword = "045823";
+            //    User UserJhon = new User();
+            //    UserJhon.UserID = "05";
+            //    UserJhon.Usermail = "JN90@mail.com";
+            //    UserJhon.Userpassword = "045823";
 
-                myList.Add(UserJhon);
+            //    myList.Add(UserJhon);
 
-                User UserAlex = new User();
-                UserAlex.UserID = "06";
-                UserAlex.Usermail = "AX54@mail.com";
-                UserAlex.Userpassword = "78941234";
+            //    User UserAlex = new User();
+            //    UserAlex.UserID = "06";
+            //    UserAlex.Usermail = "AX54@mail.com";
+            //    UserAlex.Userpassword = "78941234";
 
-                myList.Add(UserAlex);
+            //    myList.Add(UserAlex);
 
-                User UserAthena = new User();
-                UserAthena.UserID = "07";
-                UserAthena.Usermail = "AE@mail.com";
-                UserAthena.Userpassword = "09814534";
+            //    User UserAthena = new User();
+            //    UserAthena.UserID = "07";
+            //    UserAthena.Usermail = "AE@mail.com";
+            //    UserAthena.Userpassword = "09814534";
 
-                myList.Add(UserAthena);
+            //    myList.Add(UserAthena);
 
-                User UserThomas = new User();
-                UserThomas.UserID = "08";
-                UserThomas.Usermail = "TH33@mail.com";
-                UserThomas.Userpassword = "444023";
+            //    User UserThomas = new User();
+            //    UserThomas.UserID = "08";
+            //    UserThomas.Usermail = "TH33@mail.com";
+            //    UserThomas.Userpassword = "444023";
 
-                myList.Add(UserThomas);
+            //    myList.Add(UserThomas);
 
-                User UserDiana = new User();
-                UserDiana.UserID = "09";
-                UserDiana.Usermail = "DN@mail.com";
-                UserDiana.Userpassword = "80459234";
+            //    User UserDiana = new User();
+            //    UserDiana.UserID = "09";
+            //    UserDiana.Usermail = "DN@mail.com";
+            //    UserDiana.Userpassword = "80459234";
 
-                myList.Add(UserDiana);
+            //    myList.Add(UserDiana);
 
-                User UserEva = new User();
-                UserEva.UserID = "10";
-                UserEva.Usermail = "EV@mail.com";
-                UserEva.Userpassword = "895019451";
+            //    User UserEva = new User();
+            //    UserEva.UserID = "10";
+            //    UserEva.Usermail = "EV@mail.com";
+            //    UserEva.Userpassword = "895019451";
 
-                myList.Add(UserEva);
+            //    myList.Add(UserEva);
 
-                List<User> result = myList.Where(user => user.UserID == "01").ToList();
+            //    List<User> result = myList.Where(user => user.UserID == "01").ToList();
 
-                if(result.Count == 0)
-                {
-                    throw new Exception("Nothing was found");
-                }
-                else
-                {
-                    foreach (var user in result)
-                    {
-                        Console.WriteLine(user.UserID);
-                        Console.WriteLine(user.Usermail);
-                        Console.WriteLine(user.Userpassword);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
+            //    if(result.Count == 0)
+            //    {
+            //        throw new Exception("Nothing was found");
+            //    }
+            //    else
+            //    {
+            //        foreach (var user in result)
+            //        {
+            //            Console.WriteLine(user.UserID);
+            //            Console.WriteLine(user.Usermail);
+            //            Console.WriteLine(user.Userpassword);
+            //        }
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine(ex.Message);
+            //}
+
+            MyClass<string> myGClass = new MyClass<string>();
+            myGClass.newProperty1 = "Square";
+            myGClass.newProperty2 = "Black";
+            myGClass.newProperty3 = "Very Large";
+
+            Console.WriteLine(myGClass.newProperty1);
+            Console.WriteLine(myGClass.newProperty2);
+            Console.WriteLine(myGClass.newProperty3);
+
         }
     }
 }
-                    
+
+public class MyClass<G>
+{
+    public G newProperty1 { get; set; }
+    public G newProperty2 { get; set; }
+    public G newProperty3 { get; set; }
+}
+
